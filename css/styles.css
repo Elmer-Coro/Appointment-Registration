@@ -1,0 +1,131 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: monospace, sans-serif;
+  padding: 2rem 1rem;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+form {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #bbbbbb;
+}
+
+input, select, button {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-family: monospace, sans-serif;
+}
+
+input, select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  appearance: none; /* Eliminar estilos predeterminados del navegador */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.selection{
+  position: relative;
+}
+.selection::after {
+  content: '▼';
+  font-size: 12px;
+  color: #ffffff;
+  position: absolute;
+  right: 15px;
+  top: 38px; /* Ajusta este valor según la altura del select */
+  pointer-events: none;
+  right: 2.5rem;
+}
+
+/* Estilos para cuando el select está en foco o activo */
+select:focus, select:hover {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+button {
+  background-color: #4caf50;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#appointmentForm, #filterForm {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+#appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#appointmentsTable th, #appointmentsTable td {
+  border: 1px solid #333333;
+  padding: 10px;
+  text-align: left;
+}
+
+#appointmentsTable th {
+  background-color: #333333;
+}
+
+#appointmentsTable tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+#appointmentsTable tbody tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
